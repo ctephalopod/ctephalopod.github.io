@@ -1,5 +1,9 @@
+body {
+    font-family: 'Newsreader', serif;
+}
+
 h1 {
-    font-family: 'Courier Prime', 'Courier New', Courier, monospace;
+    font-family: 'Courier Prime', Courier, monospace;
 }
 
 .event {
