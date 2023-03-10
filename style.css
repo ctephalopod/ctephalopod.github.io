@@ -1,3 +1,11 @@
 h1 {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier Prime', 'Courier New', Courier, monospace;
+}
+
+.event {
+    visibility: visible;
+}
+
+.event.hidden {
+    visibility: hidden;
 }
