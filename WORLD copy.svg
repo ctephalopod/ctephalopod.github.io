@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" height="100%" width="100%" viewBox="0 0 8504.44 6285.65">
  <defs><style>
-   .all {
+   .all-map {
     stroke: #fff;
     stroke-width: 3px;
     stroke-miterlimit:10;}
@@ -30,7 +30,7 @@
    .act.na {fill: #5a5c5e;}
    .other.na {fill: #cccdcd;}
    
-   .act {opacity: .5;} 
+   .act {opacity: .65;} 
    .act:hover {opacity: 1;}
    
    .act {cursor: pointer;}
