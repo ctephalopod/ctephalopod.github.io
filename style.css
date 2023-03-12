@@ -54,7 +54,11 @@ h1 {
 .other.na {fill: #cccdcd;}
 
 /* Active country opacity hovers */
-.act {opacity: .5;} 
+.act {
+  opacity: .65;
+  transition: 250ms;
+  transition-timing-function: ease;
+} 
 .act:hover {opacity: 1;}
 
 /* Cursor states */
