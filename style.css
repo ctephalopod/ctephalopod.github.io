@@ -13,3 +13,49 @@ h1 {
 .event.hidden {
     visibility: hidden;
 }
+
+/* MAP CLASSES */
+.all-map {
+    stroke: #fff;
+    stroke-width: 3px;
+    stroke-miterlimit: 10;
+ }
+
+ /* Diff'rent strokes */
+ .small-map {stroke-width: .5px;} /* Monaco, Liecht, Macau, Hong Kong */
+ .us-states-map {stroke: rgba(255,255,255,.25);} /* id="US" */
+
+/* South America colors */
+.act.sa {fill: #6d4d40;}
+.other.sa {fill: #d2c8c4;}
+
+/* Oceania colors */
+.act.oceania {fill: #516023;}
+.other.oceania {fill: #c9cebc;}
+
+/* Europe colors */
+.act.eu {fill:#616952;}
+.other.eu {fill: #ced1ca;}
+
+/* Antarctica colors */
+.act.ant {fill: #5a5019;}
+.other.ant {fill: #ccc9b9;}
+
+/* Africa colors */
+.act.afr {fill: #804d1f;}
+.other.afr {fill: #d8c8ba;}
+
+/* Asia colors */
+.act.asia {fill: #a78a0a;}
+.other.asia {fill: #e4dbb4;}
+
+/* North America colors */
+.act.na {fill: #5a5c5e;}
+.other.na {fill: #cccdcd;}
+
+/* Active country opacity hovers */
+.act {opacity: .5;}
+.act :hover {opacity: 1;}
+
+/* Cursor states */
+.act {cursor: pointer;}
