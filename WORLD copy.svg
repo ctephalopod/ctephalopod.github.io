@@ -30,7 +30,10 @@
    .act.na {fill: #5a5c5e;}
    .other.na {fill: #cccdcd;}
    
-   .act {opacity: .65;} 
+   .act {
+    opacity: .65;
+    transition: 250ms;
+    transition-timing-funtion: ease;} 
    .act:hover {opacity: 1;}
    
    .act {cursor: pointer;}
