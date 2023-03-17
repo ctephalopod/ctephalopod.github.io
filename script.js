@@ -1,7 +1,7 @@
 const svg = document.getElementById('Layer_2');
 const paths = svg.querySelectorAll('path');
 const entryPopups = document.querySelectorAll('.entry-popup');
-const entryClose = document.querySelector(".entry-close");
+const entryCloses = document.querySelectorAll(".entry-close");
 
 paths.forEach((path) => {
   path.addEventListener('click', function() {
@@ -17,8 +17,9 @@ paths.forEach((path) => {
   });
 });
 
-entryClose.addEventListener("click", function() {
-  entryPopups.forEach((entryPopup) => {
+entryCloses.forEach((entryClose) => {
+  entryClose.addEventListener("click", function() {
+    const entryPopup = this.closest('.entry-popup');
     entryPopup.classList.add("hidden");
   });
 });
