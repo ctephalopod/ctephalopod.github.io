@@ -31,7 +31,7 @@ h1 {
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        padding: 5%;
+        padding: 5% 10%;
         -webkit-box-pack: center;
         -webkit-justify-content: center;
         -ms-flex-pack: center;
@@ -56,19 +56,20 @@ h1 {
         height: 100%;
         margin-right: auto;
         margin-left: auto;
-        background-color: #945454;
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
 
     .entry-close {
         position: fixed;
         left: auto;
-        top: 1%;
-        right: 1%;
+        top: 2%;
+        right: 2%;
         bottom: auto;
-        width: 50px;
-        height: 50px;
-        background-color: #333;
+        width: 3.2em;
+        height: 3.2em;
     }
+
     .entry-popup.hidden {
         visibility: hidden;
     }
