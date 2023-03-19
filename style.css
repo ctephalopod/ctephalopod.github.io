@@ -32,12 +32,19 @@ body {
 
     p {margin-top: 5px; margin-bottom: 8px;}
 
-/* ------ ENTRIES ------ */
+/* ------ CONTENT ------ */
+
+    .all-container {
+        /* max-height: 100vh;
+        overflow: hidden; */
+    }
 
     .entry-popup {
         visibility: hidden; 
         opacity: 0; 
-        transition: opacity 300ms ease;}
+        transition: opacity 300ms ease;
+        position: fixed;
+        }
 
     .entry-popup.visible {
         visibility: visible;
