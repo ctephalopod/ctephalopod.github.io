@@ -9,9 +9,9 @@ paths.forEach((path) => {
     const popup = document.getElementById(popupId);
     entryPopups.forEach((entryPopup) => {
       if (entryPopup === popup) {
-        entryPopup.classList.remove('hidden');
+        entryPopup.classList.add('visible');
       } else {
-        entryPopup.classList.add('hidden');
+        entryPopup.classList.remove('visible');
       }
     });
   });
@@ -20,6 +20,6 @@ paths.forEach((path) => {
 entryCloses.forEach((entryClose) => {
   entryClose.addEventListener("click", function() {
     const entryPopup = this.closest('.entry-popup');
-    entryPopup.classList.add("hidden");
+    entryPopup.classList.remove("visible");
   });
 });
