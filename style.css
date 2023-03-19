@@ -202,4 +202,15 @@ body {
     /* Cursor states */
         .act {cursor: pointer;}
 
-/* ---------------------------------- */
+        .tooltip {
+            position: absolute;
+            z-index: 999;
+            background-color: white;
+            color: black;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            }
+        .path:hover + .tooltip {
+            display: block;
+            }

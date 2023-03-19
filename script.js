@@ -23,3 +23,16 @@ entryCloses.forEach((entryClose) => {
     entryPopup.classList.remove("visible");
   });
 });
+
+function showTitleOnHover(path) {
+   const title = path.getAttribute('title');
+   const tooltip = document.createElement('div');
+   tooltip.classList.add('tooltip');
+   tooltip.textContent = title;
+   path.addEventListener('mouseover', () => {
+     document.body.appendChild(tooltip);
+   });
+   path.addEventListener('mouseout', () => {
+     tooltip.remove();
+   });
+ } 
