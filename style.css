@@ -34,10 +34,10 @@ body {
 
 /* ------ CONTENT ------ */
 
-    .all-container {
-        /* max-height: 100vh;
-        overflow: hidden; */
-    }
+    /* .all-container {
+        max-height: 100vh;
+        overflow: hidden;
+    } */
 
     .entry-popup {
         visibility: hidden; 
@@ -200,17 +200,20 @@ body {
         .act:hover {opacity: 1;}
 
     /* Cursor states */
-        .act {cursor: pointer;}
+        .ready {cursor: pointer;}
 
-        .tooltip {
+        .tooltip {visibility: hidden; position:absolute}
+        .tooltip.visible {
+            visibility: visible;
             position: absolute;
             z-index: 999;
             background-color: white;
-            color: black;
-            padding: 10px;
-            border: 1px solid black;
-            border-radius: 5px;
-            }
-        .path:hover + .tooltip {
-            display: block;
+            color: #333;
+            font-family: 'Courier Prime', Courier, monospace;
+            padding-bottom: 0px;
+            padding-top: 5px;
+            padding-right: 5px;
+            padding-left: 5px;
+            border-bottom: #333 solid;
+            margin-left: 10px;
             }
