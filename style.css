@@ -75,6 +75,7 @@ body {
         flex: 0 auto;
         opacity: 1;
         transition: opacity 300ms ease;
+        background-color: hsla(0, 0.00%, 100%, 0.70);
         }
 
     .entry-content-wrapper {
