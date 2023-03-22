@@ -160,37 +160,56 @@ body {
         stroke-miterlimit: 10;
     }
 
+    .other {filter: saturate(.8) opacity(.7);}
+
+    :root {
+        --green: #616952;
+        --lightgreen: #ced1ca;
+        --blue: #434f59;
+        --lightblue: #c6cacd;
+        --purple: #6d4d40;
+        --lightpurple: #d2c8c4;
+        --sienna: #804d1f;
+        --lightsienna: #d8c8ba;
+        --orange: #815d19;
+        --lightorange: #d3c6af;
+        --yellow: #a78a0a;
+        --lightyellow: #e4dbb4;
+        --brown: #5a5019;
+        --lightbrown: #ccc9b9;
+    }
+
     /* Diff'rent strokes */
         .small-map {stroke-width: .5px;} /* Monaco, Liecht, Macau, Hong Kong */
         .us-states-map {stroke: rgba(255,255,255,.25);} /* id="US" */
 
     /* South America colors */
-        .act.sa {fill: #6d4d40;}
-        .other.sa {fill: #d2c8c4;}
+        .act.sa {fill: var(--purple);}
+        .other.sa {fill: var(--lightpurple);}
 
     /* Oceania colors */
-        .act.oceania {fill: #815D19;}
-        .other.oceania {fill: #D3C6AF;}
+        .act.oceania {fill: var(--sienna);}
+        .other.oceania {fill: var(--lightsienna);}
 
     /* Europe colors */
-        .act.eu {fill:#616952;}
-        .other.eu {fill: #ced1ca;}
+        .act.eu {fill: var(--yellow);}
+        .other.eu {fill: var(--lightyellow);}
 
     /* Antarctica colors */
-        .act.ant {fill: #5a5019;}
-        .other.ant {fill: #ccc9b9;}
+        .act.ant {fill: var(--orange);}
+        .other.ant {fill: var(--lightorange);}
 
     /* Africa colors */
-        .act.afr {fill: #804d1f;}
-        .other.afr {fill: #d8c8ba;}
+        .act.afr {fill: var(--blue);}
+        .other.afr {fill: var(--lightblue);}
 
     /* Asia colors */
-        .act.asia {fill: #a78a0a;}
-        .other.asia {fill: #e4dbb4;}
+        .act.asia {fill: var(--brown);}
+        .other.asia {fill: var(--lightbrown);}
 
     /* North America colors */
-        .act.na {fill: #5a5c5e;}
-        .other.na {fill: #cccdcd;}
+        .act.na {fill: var(--green);}
+        .other.na {fill: var(--lightgreen);}
 
     /* Active country opacity hovers */
         .act {
@@ -211,10 +230,13 @@ body {
             background-color: white;
             color: #333;
             font-family: 'Courier Prime', Courier, monospace;
-            padding-bottom: 0px;
+            font-size: 18px;
+            padding-bottom: 3px;
             padding-top: 5px;
-            padding-right: 5px;
-            padding-left: 5px;
-            border-bottom: #333 solid;
+            padding-right: 7px;
+            padding-left: 7px;
+            border-radius: 3px;
+            box-shadow: 2px 2px 4px #3333337b;
+            /* border-bottom: #333 solid; */
             margin-left: 10px;
             }
