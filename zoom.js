@@ -22,13 +22,13 @@ select.append(...sortedOptions);
 
 console.log('Dropdown script running!');
 
-const countryDropdown = document.getElementById("country-dropdown");
-const countryOptions = countryDropdown.querySelectorAll(".dropdown-option");
+// const countryDropdown = document.getElementById("country-dropdown");
+// const countryOptions = countryDropdown.querySelectorAll(".dropdown-option");
 
-countryOptions.forEach((option) => {
-  option.addEventListener("click", function () {
-    const countryTitle = this.getAttribute("title");
-    console.log(`Selected country: ${countryTitle}`);
-  });
-});
+// countryOptions.forEach((option) => {
+//   option.addEventListener("click", function () {
+//     const countryTitle = this.getAttribute("title");
+//     console.log(`Selected country: ${countryTitle}`);
+//   });
+// });
 

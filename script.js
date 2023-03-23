@@ -27,24 +27,25 @@
 
 // Tooltip hover function //
    function addTooltipToPath(pathId) {
-      const path = document.getElementById(pathId);
-      const title = path.getAttribute('title');
-   
-      path.addEventListener('mouseenter', function(event) {
-      const tooltip = document.getElementById(`${pathId}-tooltip`);
-      tooltip.classList.add('visible');
-      });
-   
-      path.addEventListener('mousemove', function(event) {
-      const tooltip = document.getElementById(`${pathId}-tooltip`);
-      tooltip.style.top = event.pageY + 'px';
-      tooltip.style.left = event.pageX + 'px';
-      });
-   
-      path.addEventListener('mouseleave', function(event) {
-      const tooltip = document.getElementById(`${pathId}-tooltip`);
-      tooltip.classList.remove('visible');
-      });
+   const path = document.getElementById(pathId);
+   const title = path.getAttribute('title');
+
+   path.addEventListener('mouseenter', function(event) {
+   const tooltip = document.getElementById(`${pathId}-tooltip`);
+   tooltip.classList.add('visible');
+   });
+
+   path.addEventListener('mousemove', function(event) {
+   const tooltip = document.getElementById(`${pathId}-tooltip`);
+   // tooltip.style.top = event.pageY + 'px';
+   tooltip.style.top = event.pageY - tooltip.offsetHeight - 5 + 'px';
+   tooltip.style.left = event.pageX + 'px';
+   });
+
+   path.addEventListener('mouseleave', function(event) {
+   const tooltip = document.getElementById(`${pathId}-tooltip`);
+   tooltip.classList.remove('visible');
+   });
    }
    // Add tooltips to paths
       addTooltipToPath('Uruguay');
