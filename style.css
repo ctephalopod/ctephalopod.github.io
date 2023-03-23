@@ -240,3 +240,32 @@ body {
             /* border-bottom: #333 solid; */
             margin-left: 10px;
             }
+
+/* ------ DROPDOWN ------- */
+#country-dropdown {
+    position: sticky;
+    top: 2%;
+    left: 2%;
+    z-index: 1000;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Courier Prime', serif;
+    background-color: #fff;
+    border: 1px solid #333;
+    cursor: pointer;
+    max-height: 200px;
+    overflow-y: auto;
+    }
+
+#country-dropdown option {
+    font-size: 14px;
+    font-family: 'Courier Prime', serif;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    }
+
+#country-dropdown:focus-visible {
+    outline-color: black;
+    outline-style: solid;
+}
