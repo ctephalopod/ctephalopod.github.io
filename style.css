@@ -183,90 +183,89 @@ body {
 
 /* ------ MAP CLASSES ------ */
 
+.all-map {
+    stroke: #fff;
+    stroke-width: 3px;
+    stroke-miterlimit: 10;
+}
+
+.other {filter: saturate(.8) opacity(.7);}
+
 :root {
-    --grey: #e3e3e3;
-    --darkgrey: #808080;}
+    --green: #616952;
+    --lightgreen: #ced1ca;
+    --blue: #434f59;
+    --lightblue: #c6cacd;
+    --purple: #6d4d40;
+    --lightpurple: #d2c8c4;
+    --sienna: #804d1f;
+    --lightsienna: #d8c8ba;
+    --orange: #815d19;
+    --lightorange: #d3c6af;
+    --yellow: #a78a0a;
+    --lightyellow: #e4dbb4;
+    --brown: #5a5019;
+    --lightbrown: #ccc9b9;
+}
 
-    .all-map {
-        stroke: #fff;
-        stroke-width: 3px;
-        stroke-miterlimit: 10;
-    }
+/* Diff'rent strokes */
+    .small-map {stroke-width: .5px;} /* Monaco, Liecht, Macau, Hong Kong */
+    .us-states-map {stroke: rgba(255,255,255,.25);} /* id="US" */
 
-    /* Diff'rent strokes */
-        .small-map {stroke-width: .5px;} /* Monaco, Liecht, Macau, Hong Kong */
-        .us-states-map {stroke: rgba(255,255,255,.25);} /* id="US" */
+/* South America colors */
+    .act.sa {fill: var(--purple);}
+    .other.sa {fill: var(--lightpurple);}
 
-    /* South America colors */
-        .act.sa:hover {fill: #6d4d40;}
-        /* .other.sa {fill: #d2c8c4;} */
-        .other.sa {fill: var(--grey);}
-        /* .act.sa {fill: var(--brick);} */
+/* Oceania colors */
+    .act.oceania {fill: var(--sienna);}
+    .other.oceania {fill: var(--lightsienna);}
 
-    /* Oceania colors */
-        .act.oceania:hover {fill: #a78a0a;}
-        /* .other.oceania {fill: #D3C6AF;} */
-        .other.oceania {fill: var(--grey);}
-        /* .act.oceania {fill: var(--brick);} */
+/* Europe colors */
+    .act.eu {fill: var(--yellow);}
+    .other.eu {fill: var(--lightyellow);}
 
-    /* Europe colors */
-        .act.eu:hover {fill:#804d1f;}
-        /* .other.eu {fill: #ced1ca;} */
-        .other.eu {fill: var(--grey);}
-        /* .act.eu {fill:var(--brick);} */
+/* Antarctica colors */
+    .act.ant {fill: var(--orange);}
+    .other.ant {fill: var(--lightorange);}
 
-    /* Antarctica colors */
-        .act.ant:hover {fill: #815d19;}
-        /* .other.ant {fill: #ccc9b9;} */
-        .other.ant {fill: var(--grey);}
-        /* .act.ant {fill: var(--brick);} */
+/* Africa colors */
+    .act.afr {fill: var(--blue);}
+    .other.afr {fill: var(--lightblue);}
 
-    /* Africa colors */
-        .act.afr:hover {fill: #5a5c5e;}
-        /* .other.afr {fill: #d8c8ba;} */
-        .other.afr {fill: var(--grey);}
-        /* .act.afr {fill: var(--brick);} */
+/* Asia colors */
+    .act.asia {fill: var(--brown);}
+    .other.asia {fill: var(--lightbrown);}
 
-    /* Asia colors */
-        .act.asia:hover {fill: #5a5019;}
-        /* .other.asia {fill: #e4dbb4;} */
-        .other.asia {fill: var(--grey);}
-        /* .act.asia {fill: var(--brick);} */
+/* North America colors */
+    .act.na {fill: var(--green);}
+    .other.na {fill: var(--lightgreen);}
 
-    /* North America colors */
-        .act.na:hover {fill: #616952;}
-        /* .other.na {fill: #cccdcd;} */
-        .other.na {fill: var(--grey);}
-        /* .act.na {fill: var(--brick);} */
+/* Active country opacity hovers */
+    .act {
+        opacity: .65;
+        transition: 250ms;
+        transition-timing-function: ease;   
+    } 
+    .act:hover {opacity: 1;}
 
-    /* Active country opacity hovers */
-        .act {
-            /* opacity: .75; */
-            fill: var(--darkgrey);
-            transition: 250ms;
-            transition-timing-function: ease;   
-        } 
-        .act:hover {opacity: 1;}
+/* Cursor states */
+    .ready {cursor: pointer;}
 
-    /* Cursor states */
-        .ready {cursor: pointer;}
-
-        .tooltip {visibility: hidden; position:absolute}
-        .tooltip.visible {
-            visibility: visible;
-            position: absolute;
-            z-index: 999;
-            background-color: white;
-            color: #333;
-            font-size: 18px;
-            font-family: 'Courier Prime', Courier, monospace;
-            padding-bottom: 5px;
-            padding-top: 7px;
-            padding-right: 10px;
-            padding-left: 10px;
-            border-radius: 3px;
-            box-shadow: 2px 2px 4px #5a5c5e;
-            /* border-bottom: #333 solid;
-            border-top: #333 solid; */
-            margin-left: 10px;
-            }
+    .tooltip {visibility: hidden; position:absolute}
+    .tooltip.visible {
+        visibility: visible;
+        position: absolute;
+        z-index: 999;
+        background-color: white;
+        color: #333;
+        font-family: 'Courier Prime', Courier, monospace;
+        font-size: 18px;
+        padding-bottom: 3px;
+        padding-top: 5px;
+        padding-right: 7px;
+        padding-left: 7px;
+        border-radius: 3px;
+        box-shadow: 2px 2px 4px #3333337b;
+        /* border-bottom: #333 solid; */
+        margin-left: 10px;
+        }
