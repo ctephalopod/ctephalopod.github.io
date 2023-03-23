@@ -151,7 +151,41 @@ body {
         background-color: #dfdfdf !important;
     }
 
+/* ------ DROPDOWN ------- */
+#country-dropdown {
+    position: sticky;
+    top: 2%;
+    left: 2%;
+    z-index: 1000;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Courier Prime', serif;
+    background-color: #fff;
+    border: 1px solid #333;
+    cursor: pointer;
+    max-height: 200px;
+    overflow-y: auto;
+    }
+
+#country-dropdown option {
+    font-size: 14px;
+    font-family: 'Courier Prime', serif;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    }
+
+#country-dropdown:focus-visible {
+    outline-color: black;
+    outline-style: solid;
+}
+
+
 /* ------ MAP CLASSES ------ */
+
+:root {
+    --grey: #e3e3e3;
+    --darkgrey: #808080;}
 
     .all-map {
         stroke: #fff;
@@ -164,36 +198,51 @@ body {
         .us-states-map {stroke: rgba(255,255,255,.25);} /* id="US" */
 
     /* South America colors */
-        .act.sa {fill: #6d4d40;}
-        .other.sa {fill: #d2c8c4;}
+        .act.sa:hover {fill: #6d4d40;}
+        /* .other.sa {fill: #d2c8c4;} */
+        .other.sa {fill: var(--grey);}
+        /* .act.sa {fill: var(--brick);} */
 
     /* Oceania colors */
-        .act.oceania {fill: #815D19;}
-        .other.oceania {fill: #D3C6AF;}
+        .act.oceania:hover {fill: #a78a0a;}
+        /* .other.oceania {fill: #D3C6AF;} */
+        .other.oceania {fill: var(--grey);}
+        /* .act.oceania {fill: var(--brick);} */
 
     /* Europe colors */
-        .act.eu {fill:#616952;}
-        .other.eu {fill: #ced1ca;}
+        .act.eu:hover {fill:#804d1f;}
+        /* .other.eu {fill: #ced1ca;} */
+        .other.eu {fill: var(--grey);}
+        /* .act.eu {fill:var(--brick);} */
 
     /* Antarctica colors */
-        .act.ant {fill: #5a5019;}
-        .other.ant {fill: #ccc9b9;}
+        .act.ant:hover {fill: #815d19;}
+        /* .other.ant {fill: #ccc9b9;} */
+        .other.ant {fill: var(--grey);}
+        /* .act.ant {fill: var(--brick);} */
 
     /* Africa colors */
-        .act.afr {fill: #804d1f;}
-        .other.afr {fill: #d8c8ba;}
+        .act.afr:hover {fill: #5a5c5e;}
+        /* .other.afr {fill: #d8c8ba;} */
+        .other.afr {fill: var(--grey);}
+        /* .act.afr {fill: var(--brick);} */
 
     /* Asia colors */
-        .act.asia {fill: #a78a0a;}
-        .other.asia {fill: #e4dbb4;}
+        .act.asia:hover {fill: #5a5019;}
+        /* .other.asia {fill: #e4dbb4;} */
+        .other.asia {fill: var(--grey);}
+        /* .act.asia {fill: var(--brick);} */
 
     /* North America colors */
-        .act.na {fill: #5a5c5e;}
-        .other.na {fill: #cccdcd;}
+        .act.na:hover {fill: #616952;}
+        /* .other.na {fill: #cccdcd;} */
+        .other.na {fill: var(--grey);}
+        /* .act.na {fill: var(--brick);} */
 
     /* Active country opacity hovers */
         .act {
-            opacity: .65;
+            /* opacity: .75; */
+            fill: var(--darkgrey);
             transition: 250ms;
             transition-timing-function: ease;   
         } 
@@ -209,11 +258,15 @@ body {
             z-index: 999;
             background-color: white;
             color: #333;
+            font-size: 18px;
             font-family: 'Courier Prime', Courier, monospace;
-            padding-bottom: 0px;
-            padding-top: 5px;
-            padding-right: 5px;
-            padding-left: 5px;
-            border-bottom: #333 solid;
+            padding-bottom: 5px;
+            padding-top: 7px;
+            padding-right: 10px;
+            padding-left: 10px;
+            border-radius: 3px;
+            box-shadow: 2px 2px 4px #5a5c5e;
+            /* border-bottom: #333 solid;
+            border-top: #333 solid; */
             margin-left: 10px;
             }
