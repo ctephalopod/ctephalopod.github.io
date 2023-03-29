@@ -75,7 +75,6 @@ body {
         flex: 0 auto;
         opacity: 1;
         transition: opacity 300ms ease;
-        background-color: hsla(0, 0.00%, 100%, 0.70);
         }
 
     .entry-content-wrapper {
@@ -152,91 +151,120 @@ body {
         background-color: #dfdfdf !important;
     }
 
+/* ------ DROPDOWN ------- */
+#country-dropdown {
+    position: sticky;
+    top: 2%;
+    left: 2%;
+    z-index: 1000;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Courier Prime', serif;
+    background-color: #fff;
+    border: 1px solid #333;
+    cursor: pointer;
+    max-height: 200px;
+    overflow-y: auto;
+    }
+
+#country-dropdown option {
+    font-size: 14px;
+    font-family: 'Courier Prime', serif;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    }
+
+#country-dropdown:focus-visible {
+    outline-color: black;
+    outline-style: solid;
+}
+
+
 /* ------ MAP CLASSES ------ */
 
-    .all-map {
-        stroke: #fff;
-        stroke-width: 3px;
-        stroke-miterlimit: 10;
-    }
+.all-map {
+    stroke: #fff;
+    stroke-width: 3px;
+    stroke-miterlimit: 10;
+}
 
-    .other {filter: saturate(.8) opacity(.7);}
+.other {filter: saturate(.8) opacity(.7);}
 
-    :root {
-        --green: #616952;
-        --lightgreen: #ced1ca;
-        --blue: #434f59;
-        --lightblue: #c6cacd;
-        --purple: #6d4d40;
-        --lightpurple: #d2c8c4;
-        --sienna: #804d1f;
-        --lightsienna: #d8c8ba;
-        --orange: #815d19;
-        --lightorange: #d3c6af;
-        --yellow: #a78a0a;
-        --lightyellow: #e4dbb4;
-        --brown: #5a5019;
-        --lightbrown: #ccc9b9;
-    }
+:root {
+    --green: #616952;
+    --lightgreen: #ced1ca;
+    --blue: #434f59;
+    --lightblue: #c6cacd;
+    --purple: #6d4d40;
+    --lightpurple: #d2c8c4;
+    --sienna: #804d1f;
+    --lightsienna: #d8c8ba;
+    --orange: #815d19;
+    --lightorange: #d3c6af;
+    --yellow: #a78a0a;
+    --lightyellow: #e4dbb4;
+    --brown: #5a5019;
+    --lightbrown: #ccc9b9;
+}
 
-    /* Diff'rent strokes */
-        .small-map {stroke-width: .5px;} /* Monaco, Liecht, Macau, Hong Kong */
-        .us-states-map {stroke: rgba(255,255,255,.25);} /* id="US" */
+/* Diff'rent strokes */
+    .small-map {stroke-width: .5px;} /* Monaco, Liecht, Macau, Hong Kong */
+    .us-states-map {stroke: rgba(255,255,255,.25);} /* id="US" */
 
-    /* South America colors */
-        .act.sa {fill: var(--purple);}
-        .other.sa {fill: var(--lightpurple);}
+/* South America colors */
+    .act.sa {fill: var(--purple);}
+    .other.sa {fill: var(--lightpurple);}
 
-    /* Oceania colors */
-        .act.oceania {fill: var(--sienna);}
-        .other.oceania {fill: var(--lightsienna);}
+/* Oceania colors */
+    .act.oceania {fill: var(--sienna);}
+    .other.oceania {fill: var(--lightsienna);}
 
-    /* Europe colors */
-        .act.eu {fill: var(--yellow);}
-        .other.eu {fill: var(--lightyellow);}
+/* Europe colors */
+    .act.eu {fill: var(--yellow);}
+    .other.eu {fill: var(--lightyellow);}
 
-    /* Antarctica colors */
-        .act.ant {fill: var(--orange);}
-        .other.ant {fill: var(--lightorange);}
+/* Antarctica colors */
+    .act.ant {fill: var(--orange);}
+    .other.ant {fill: var(--lightorange);}
 
-    /* Africa colors */
-        .act.afr {fill: var(--blue);}
-        .other.afr {fill: var(--lightblue);}
+/* Africa colors */
+    .act.afr {fill: var(--blue);}
+    .other.afr {fill: var(--lightblue);}
 
-    /* Asia colors */
-        .act.asia {fill: var(--brown);}
-        .other.asia {fill: var(--lightbrown);}
+/* Asia colors */
+    .act.asia {fill: var(--brown);}
+    .other.asia {fill: var(--lightbrown);}
 
-    /* North America colors */
-        .act.na {fill: var(--green);}
-        .other.na {fill: var(--lightgreen);}
+/* North America colors */
+    .act.na {fill: var(--green);}
+    .other.na {fill: var(--lightgreen);}
 
-    /* Active country opacity hovers */
-        .act {
-            opacity: .65;
-            transition: 250ms;
-            transition-timing-function: ease;   
-        } 
-        .act:hover {opacity: 1;}
+/* Active country opacity hovers */
+    .act {
+        opacity: .65;
+        transition: 250ms;
+        transition-timing-function: ease;   
+    } 
+    .act:hover {opacity: 1;}
 
-    /* Cursor states */
-        .ready {cursor: pointer;}
+/* Cursor states */
+    .ready {cursor: pointer;}
 
-        .tooltip {visibility: hidden; position:absolute}
-        .tooltip.visible {
-            visibility: visible;
-            position: absolute;
-            z-index: 999;
-            background-color: white;
-            color: #333;
-            font-family: 'Courier Prime', Courier, monospace;
-            font-size: 18px;
-            padding-bottom: 3px;
-            padding-top: 5px;
-            padding-right: 7px;
-            padding-left: 7px;
-            border-radius: 3px;
-            box-shadow: 2px 2px 4px #3333337b;
-            /* border-bottom: #333 solid; */
-            margin-left: 10px;
-            }
+    .tooltip {visibility: hidden; position:absolute}
+    .tooltip.visible {
+        visibility: visible;
+        position: absolute;
+        z-index: 999;
+        background-color: white;
+        color: #333;
+        font-family: 'Courier Prime', Courier, monospace;
+        font-size: 18px;
+        padding-bottom: 3px;
+        padding-top: 5px;
+        padding-right: 7px;
+        padding-left: 7px;
+        border-radius: 3px;
+        box-shadow: 2px 2px 4px #3333337b;
+        margin-left: 10px;
+        }
